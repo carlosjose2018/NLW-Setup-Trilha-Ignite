@@ -4,8 +4,7 @@ NLW Setup | Rocketseat Trilha Ignite
 
 ## 🚀 Começando
 
-Configuração e instalações de dependências para criação do server.
-
+Você pode optar em baixar o server sem precisarmos codar juntos,porém será necessário ter o  * [Node](https://nodejs.org/en/) - Node_v18.13.0 lts,por fim basta dar um "npm run dev" no terminal e acessar o localhost:3333.
 
 ### 📋 Pré-requisitos
 
@@ -15,7 +14,92 @@ Ter um editor de código de sua preferência.
 
 Ter Instalado o node.js  na versão mais instável .
 
+
+## 📑  Codando Juntos
+
+Criar uma pasta server
+
+Instalação de  dependência [`🔧 Instalação`](#instalação)
+
+Configurando arquivos [`⚙️ tsconfig.json e  Package.json configurações`](#tsconfig.json-e-Package.json-configurações)
+
+Criar pasta src.
+
+Criando arquivo server.ts 
+
+``` 
+              /*Código server.ts */
+
+import Fastify from "fastify";
+import cors from "@fastify/cors"
+import {PrismaClient} from "@prisma/client"
+
+
+const app = Fastify();
+const prisma = new PrismaClient()
+
+app.register(cors)
+
+
+app.get('/hello',async () =>{
+  const habits = await prisma.habit.findFirst({
+    where:{
+      title:{
+        startsWith:'Beber'
+      }
+    }
+  })
+  return habits
+})
+
+app.listen({
+  port:3333,
+}).then(() =>{
+  console.log("HTTP Server running!")
+})
+```
+Configurando arquivo Schema.prima
+
+```
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Habit{
+  id String @id @default(uuid())
+  title String
+  created_at DateTime
+
+  @@map("habits")
+}
+```
+
+Preenchedo tabela do  Banco de Dado direto no Navegador.
+
+```
+--> terminal 
+npx prisma studio
+```
+
+Rodar servidor 
+```
+npm run dev
+```
+
 ### 🔧 Instalação
+
+Node.js® é um ambiente de tempo de execução JavaScript multiplataforma e de código aberto.
+```
+Node.exe
+```
 
 Instalar o package.json responsável por guardar informações, scripts e controle de versionamento de bibliotecas do projetos.
 
@@ -97,23 +181,13 @@ Depois do tsx instalado e configurações do package.json realizado server pront
 npm run dev
 ```
 
-## 📑  Codando Juntos
-
-Criar uma pasta server
-
-Instalar dependência [`Instalação`](#instalação)
-
-criar pasta src.
-
-criar arquivo server.ts 
-
 ## 🛠️ Construído com
+Ferramentas ultilizadas no projeto
 
-Mencione as ferramentas que você usou para criar seu projeto
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - O framework web usado
-* [Maven](https://maven.apache.org/) - Gerente de Dependência
-* [ROME](https://rometools.github.io/rome/) - Usada para gerar RSS
+* [Node](https://nodejs.org/en/) - Node_v18.13.0 lts
+* [fastify](https://www.fastify.io/) 
+* [typescript](https://www.typescriptlang.org/) 
+* [prisma](https://www.prisma.io/) 
 
 ## 🖇️ Colaborando
 
@@ -121,28 +195,21 @@ Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoS
 
 ## 📌 Versão
 
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
+"version": "1.0.0",
 
 ## ✒️ Autores
 
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
+Diego Fernandes e Rodrigo Gonçalves
 ## 📄 Licença
 
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
-
+Este projeto foi devenvolvido com proposito didatico pela plataforma de ensino [`rocketseat`](https://www.rocketseat.com.br/). 
 ## 🎁 Expressões de gratidão
 
 * Conte a outras pessoas sobre este projeto 📢;
 * Convide alguém da equipe para uma cerveja 🍺;
 * Um agradecimento publicamente 🫂;
-* etc.
+* Gradeciemento para a https://www.rocketseat.com.br/ por desenvolver um belessimo projeto.
 
 
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ com ❤️ por [carlosajose2018](github.com/carlosjose2018/) 😊
