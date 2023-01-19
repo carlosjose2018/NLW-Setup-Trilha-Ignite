@@ -6,7 +6,7 @@ NLW Setup | Rocketseat Trilha Ignite
 
 Configuração do server Trilha Ignite.
 
-Consulte **[Construído com](#Construídocom-%C3%A7%C3%A3o)** para saber as tecnologia ultilizadas no projeto.
+Consulte **[Construído com](#Construído-%C3%A7%C3%A3o)** para saber as tecnologia ultilizadas no projeto.
 
 ### 📋 Pré-requisitos
 
