@@ -41,6 +41,21 @@ tsx é um comando CLI ( alternativo a node) para executar perfeitamente o TypeSc
 ```
 npm i tsx -D
 ```
+
+Prisma desbloqueia um novo nível de experiência de desenvolvedor ao trabalhar com bancos de dados graças ao seu modelo de dados intuitivo, migrações automatizadas, segurança de tipo & conclusão automática.
+```
+npm i -D prisma
+```
+
+O Prisma Client JS é um construtor de consultas gerado automaticamente que permite o acesso seguro ao banco de dados e reduz o clichê. Você pode usá-lo como uma alternativa aos ORMs tradicionais, como Sequelize, TypeORM ou construtores de consultas SQL, como knex.js
+```
+npm i @prisma/client
+```
+
+Isso cria um novo diretório prisma com seu arquivo de esquema Prisma e configura o SQLite como seu banco de dados.
+```
+ npx prisma init --datasource-provider SQLite
+```
 ## ⚙️ tsconfig.json e  Package.json configurações.
 
 ### 🔩 tsconfig.json
@@ -65,23 +80,16 @@ Antes
 Depois 
 ```
  "scripts": {
-    "dev": "tsx src/server.ts"
+    "dev": "tsx watch src/server.ts"
   },
 ```
-### 🔩 Analise os testes de ponta a ponta
 
-Explique que eles verificam esses testes e porquê.
+### ⌨️ testes de estilo de codificação
 
-```
-Dar exemplos
-```
-
-### ⌨️ E testes de estilo de codificação
-
-Explique que eles verificam esses testes e porquê.
+Depois do tsx instalado e configurações do package.json realizado server pronto para uso .
 
 ```
-Dar exemplos
+npm run dev
 ```
 
 ## 📦 Implantação
