@@ -1,4 +1,4 @@
-# GoalsApp
+# nameApp
 
 NLW Setup | Rocketseat Trilha Ignite
 
