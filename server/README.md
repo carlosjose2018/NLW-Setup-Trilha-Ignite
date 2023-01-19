@@ -1,4 +1,4 @@
-# GoalsApp
+# Server
 
 NLW Setup | Rocketseat Trilha Ignite
 
@@ -10,34 +10,64 @@ Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar 
 
 ### 📋 Pré-requisitos
 
-De que coisas você precisa para instalar o software e como instalá-lo?
-
-```
-Dar exemplos
-```
+Um breve conhecimento em javacript  e typescript.
+Ter um editor de codigo.
+Ter Instalado o node.js  na versão mais instável .
 
 ### 🔧 Instalação
 
-Uma série de exemplos passo-a-passo que informam o que você deve executar para ter um ambiente de desenvolvimento em execução.
-
-Diga como essa etapa será:
+Instalar o package.json responsável por guardar informações, scripts e controle de versionamento de bibliotecas do projetos.
 
 ```
-Dar exemplos
+npm  init -y  
 ```
 
-E repita:
+O Fastify é uma estrutura da web altamente focada em fornecer a melhor experiência de desenvolvedor com a arquitetura de plug-in menos aérea e poderosa, inspirada no Hapi e no Express. Até onde sabemos, é uma das estruturas da web mais rápidas da cidade.
 
 ```
-Até finalizar
+ npm install fastify 
 ```
 
-Termine com um exemplo de como obter dados do sistema ou como usá-los para uma pequena demonstração.
+Instação Typescript para usar no desenvolvimento do projeto.
+```
+ npm install typescript -D 
+```
 
-## ⚙️ Executando os testes
+Executar tsc --init para criar um arquivo tsconfig.json
+```
+npx tsc --init
+```
+tsx é um comando CLI ( alternativo a node) para executar perfeitamente o TypeScript & ESM, em ambos commonjs & module tipos de embalagem.
+```
+npm i tsx -D
+```
+## ⚙️ tsconfig.json e  Package.json configurações.
 
-Explicar como executar os testes automatizados para este sistema.
+### 🔩 tsconfig.json
 
+Antes
+```
+ "target": "es2016",  
+```
+Depois 
+```
+"target": "es2020",  
+```
+
+### 🔩 package.json
+
+Antes
+```
+ "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+```
+Depois 
+```
+ "scripts": {
+    "dev": "tsx src/server.ts"
+  },
+```
 ### 🔩 Analise os testes de ponta a ponta
 
 Explique que eles verificam esses testes e porquê.
