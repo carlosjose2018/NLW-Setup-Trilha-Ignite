@@ -4,9 +4,9 @@ NLW Setup | Rocketseat Trilha Ignite
 
 ## 🚀 Começando
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+Configuração do server Trilha Ignite.
 
-Consulte **[Implantação](#-implanta%C3%A7%C3%A3o)** para saber como implantar o projeto.
+Consulte **[Construído com](#Construídocom-%C3%A7%C3%A3o)** para saber as tecnologia ultilizadas no projeto.
 
 ### 📋 Pré-requisitos
 
@@ -55,6 +55,10 @@ npm i @prisma/client
 Isso cria um novo diretório prisma com seu arquivo de esquema Prisma e configura o SQLite como seu banco de dados.
 ```
  npx prisma init --datasource-provider SQLite
+```
+@fastify/cors permite o uso de CORS em um aplicativo Fastify.
+```
+ npm i @fastify/cors
 ```
 ## ⚙️ tsconfig.json e  Package.json configurações.
 
