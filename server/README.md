@@ -4,14 +4,15 @@ NLW Setup | Rocketseat Trilha Ignite
 
 ## 🚀 Começando
 
-Configuração do server Trilha Ignite.
+Configuração e instalações de dependências para criação do server.
 
-Consulte **[Construído com](#Construídocom-%C3%A7%C3%A3o)** para saber as tecnologia ultilizadas no projeto.
 
 ### 📋 Pré-requisitos
 
 Um breve conhecimento em javacript  e typescript.
-Ter um editor de codigo.
+
+Ter um editor de código de sua preferência.
+
 Ter Instalado o node.js  na versão mais instável .
 
 ### 🔧 Instalação
@@ -96,9 +97,11 @@ Depois do tsx instalado e configurações do package.json realizado server pront
 npm run dev
 ```
 
-## 📦 Implantação
+## 📑  Codando Juntos
 
-Adicione notas adicionais sobre como implantar isso em um sistema ativo
+Criar uma pasta server
+
+Instalar dependência [`Instalação`](#instalação)
 
 ## 🛠️ Construído com
 
