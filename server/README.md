@@ -100,7 +100,7 @@ npm run dev
 
 Adicione notas adicionais sobre como implantar isso em um sistema ativo
 
-## 🛠️ Construído com
+## Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
 
