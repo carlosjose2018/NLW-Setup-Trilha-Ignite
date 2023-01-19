@@ -4,7 +4,17 @@ NLW Setup | Rocketseat Trilha Ignite
 
 ## 🚀 Começando
 
-Você pode optar em baixar o server sem precisarmos codar juntos,porém será necessário ter o  * [Node](https://nodejs.org/en/) - Node_v18.13.0 lts,por fim basta dar um "npm run dev" no terminal e acessar o localhost:3333.
+Você pode optar em baixar o server sem precisarmos codar juntos,porém é necessário ter o  * [Node](https://nodejs.org/en/) - Node_v18.13.0 lts,diante disso segue os comando necessarios para instalar as dependência. 
+
+Comando para instalar as Dependência necessárias.
+```
+npm install 
+```
+
+Iniciando servidor local.
+```
+npm run dev
+```
 
 ### 📋 Pré-requisitos
 
@@ -188,10 +198,6 @@ Ferramentas ultilizadas no projeto
 * [fastify](https://www.fastify.io/) 
 * [typescript](https://www.typescriptlang.org/) 
 * [prisma](https://www.prisma.io/) 
-
-## 🖇️ Colaborando
-
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
 
 ## 📌 Versão
 
