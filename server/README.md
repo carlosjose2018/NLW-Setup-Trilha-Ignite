@@ -103,6 +103,10 @@ Criar uma pasta server
 
 Instalar dependência [`Instalação`](#instalação)
 
+criar pasta src.
+
+criar arquivo server.ts 
+
 ## 🛠️ Construído com
 
 Mencione as ferramentas que você usou para criar seu projeto
