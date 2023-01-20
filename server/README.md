@@ -140,6 +140,23 @@ npx prisma studio
 ![imgdatabaseindex](https://user-images.githubusercontent.com/70242165/213721201-e327b7f9-c369-43e4-993b-e14ff63fcd88.png)
 
 Para quem deseja visualizar seu banco de dado em forma de diagrama pode usar o mando abaixo não obrigatorio.
+
+```
+npm i -D prisma-erd-generator @mermaid-js/mermaid-cli
+```
+Adiciona a linha abaixo no schema.prisma
+
+```
+generator erd {
+  provider = "prisma-erd-generator"
+}
+-----> Opcional linha 8 a 10 <-----
+```
+Iniciar Generator
+
+```
+npx prisma generate
+```
 Rodar servidor 
 ```
 npm run dev
