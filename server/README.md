@@ -152,7 +152,7 @@ generator erd {
 }
 -----> Opcional linha 8 a 10 <-----
 ```
-Iniciar Generator
+Iniciar Generator, apos Iniciado será gerando um arquivo svg na pasta prisma.
 
 ```
 $ npx prisma generate
@@ -172,16 +172,27 @@ const prisma = new PrismaClient()
 ![generation](https://user-images.githubusercontent.com/70242165/213732358-66a23279-eccc-4022-b8a6-d908aeea9039.png)
 ![mapdata](https://user-images.githubusercontent.com/70242165/213732972-89fcdaef-6f65-4d72-88cc-c315c633ddbe.png)
 
+
+Semeando seu banco de dados, dentro da pasta prisma crie uma arquivo com nome seed.ts copie o comandando abaixo.
+
+```
+
+```
+
 Rodar servidor 
 ```
 npm run dev
 ```
 
 ### 🔧 Instalação
+Executar tsc --init para criar um arquivo tsconfig.json
+```
+npx tsc --init
+```
 
 Node.js® é um ambiente de tempo de execução JavaScript multiplataforma e de código aberto.
 ```
-Node.exe
+npm install 
 ```
 
 Instalar o package.json responsável por guardar informações, scripts e controle de versionamento de bibliotecas do projetos.
@@ -201,10 +212,6 @@ Instação Typescript para usar no desenvolvimento do projeto.
  npm install typescript -D 
 ```
 
-Executar tsc --init para criar um arquivo tsconfig.json
-```
-npx tsc --init
-```
 tsx é um comando CLI ( alternativo a node) para executar perfeitamente o TypeScript & ESM, em ambos commonjs & module tipos de embalagem.
 ```
 npm i tsx -D
@@ -255,7 +262,11 @@ Depois
     "dev": "tsx watch src/server.ts"
   },
 ```
-
+```
+ "prisma": {
+    "seed": "tsx-node prisma/seed.ts"
+  },
+```
 ### ⌨️ testes de estilo de codificação
 
 Depois do tsx instalado e configurações do package.json realizado server pronto para uso .
