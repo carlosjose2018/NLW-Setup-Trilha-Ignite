@@ -135,6 +135,7 @@ Preenchedo tabela do  Banco de Dado direto no Navegador.
 --> terminal 
 npx prisma studio
 ```
+![imgdatabaseindex](https://user-images.githubusercontent.com/70242165/213721201-e327b7f9-c369-43e4-993b-e14ff63fcd88.png)
 
 
 Rodar servidor 
