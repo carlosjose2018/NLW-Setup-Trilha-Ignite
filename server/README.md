@@ -129,6 +129,8 @@ Comando para atualizar banco de dado, atualizando ramificação do dados.
 ```
 npx prisma migrate dev
 ```
+![migrates](https://user-images.githubusercontent.com/70242165/213725404-54b99284-0b84-46cd-bdb1-7db85af66597.png)
+
 Preenchedo tabela do  Banco de Dado direto no Navegador.
 
 ```
