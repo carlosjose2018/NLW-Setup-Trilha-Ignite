@@ -137,7 +137,7 @@ npx prisma studio
 ```
 ![imgdatabaseindex](https://user-images.githubusercontent.com/70242165/213721201-e327b7f9-c369-43e4-993b-e14ff63fcd88.png)
 
-
+Para quem deseja visualizar seu banco de dado em forma de diagrama pode usar o mando abaixo não obrigatorio.
 Rodar servidor 
 ```
 npm run dev
