@@ -139,7 +139,7 @@ npx prisma studio
 ```
 ![imgdatabaseindex](https://user-images.githubusercontent.com/70242165/213721201-e327b7f9-c369-43e4-993b-e14ff63fcd88.png)
 
-Para quem deseja visualizar seu banco de dado em forma de diagrama pode usar o mando abaixo não obrigatorio.
+Para quem deseja visualizar seu banco de dado em forma de diagrama pode usar o código abaixo .
 
 ```
 npm i -D prisma-erd-generator @mermaid-js/mermaid-cli
@@ -155,7 +155,18 @@ generator erd {
 Iniciar Generator
 
 ```
-npx prisma generate
+$ npx prisma generate
+
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+
+✔ Generated Prisma Client (4.9.0 | library) to .\node_modules\@prisma\client in 338ms
+
+✔ Generated Entity-relationship-diagram (1.2.5) to .\prisma\ERD.svg in 6.49s
+You can now start using Prisma Client in your code. Reference: https://pris.ly/d/client
+
+import { PrismaClient } from '@prisma/client'
+const prisma = new PrismaClient()
 ```
 Rodar servidor 
 ```
