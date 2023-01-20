@@ -167,6 +167,9 @@ You can now start using Prisma Client in your code. Reference: https://pris.ly/d
 
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
+
+![generation](https://user-images.githubusercontent.com/70242165/213732358-66a23279-eccc-4022-b8a6-d908aeea9039.png)
+
 ```
 Rodar servidor 
 ```
