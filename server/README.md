@@ -8,12 +8,12 @@ Você pode optar em baixar o server sem precisarmos codar juntos,porém é neces
 
 Comando para instalar as Dependência necessárias.
 ```
-npm install 
+npm install <-- atualizando pacote.
 ```
 
 Iniciando servidor local.
 ```
-npm run dev
+npm run dev 
 ```
 
 ### 📋 Pré-requisitos
@@ -29,13 +29,13 @@ Ter Instalado o node.js  na versão mais instável .
 
 Criar uma pasta server
 
-Instalação de  dependência [`🔧 Instalação`](#instalação)
+Instalações das  dependências [`🔧 Instalação`](#instalação)
 
-Configurando arquivos [`⚙️ tsconfig.json e  Package.json configurações`](#tsconfig.json-e-Package.json-configurações)
+Configuraçoes dos  arquivos [`⚙️ tsconfig.json e  Package.json configurações`](#tsconfig.json-e-Package.json-configurações)
 
 Criar pasta src.
 
-Criando arquivo server.ts 
+Criando arquivo server.ts dentro da pasta src. 
 
 ``` 
               /*Código server.ts */
@@ -84,20 +84,58 @@ datasource db {
 }
 
 model Habit{
+
   id String @id @default(uuid())
   title String
   created_at DateTime
 
   @@map("habits")
 }
+
+model HabitWeekDays{
+  id String @id @default(uuid())
+  
+
+  habit_id String
+  week_day Int
+
+  @@unique([habit_id, week_day])
+  @@map("habit_week_days")
+}
+
+model Day{
+  id String @id @default(uuid())
+  date DateTime
+
+
+  @@unique([date])
+  @@map("days")
+}
+
+
+model DayHabit{
+  id String @id @default(uuid())
+
+  day_id String
+  habit_id String
+
+
+  @@unique([day_id,habit_id])
+  @@map("day_habits")
+}
 ```
 
+Comando para atualizar banco de dado, atualizando ramificação do dados.
+```
+npx prisma migrate dev
+```
 Preenchedo tabela do  Banco de Dado direto no Navegador.
 
 ```
 --> terminal 
 npx prisma studio
 ```
+
 
 Rodar servidor 
 ```
