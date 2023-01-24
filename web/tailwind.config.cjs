@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     './src/**/*.tsx',
-    './inde.html'
+    './index.html'
   ],
   theme: {
     extend: {
@@ -11,7 +11,7 @@ module.exports = {
       }
     },
     gridTemplateRows:{
-       7: 'repeat(7, minmax(0, ifr))'      
+       7: 'repeat(7, minmax(0, 1fr))'      
     }
   },
   plugins: [],
